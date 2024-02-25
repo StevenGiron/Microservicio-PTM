@@ -21,6 +21,8 @@ Ejecutar
 - create user 'steven' identified by 'root';
 - grant all privileges on *.* to 'steven'@'%';
 
+La base de datos se creara y poblara automaticamente al ejecutar el backend
+
 Instrucciones para ejecutar el frontend
 
 Tener instalado:
