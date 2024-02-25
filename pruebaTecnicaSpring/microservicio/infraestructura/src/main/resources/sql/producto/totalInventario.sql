@@ -1,0 +1,2 @@
+SELECT total_inventario
+FROM vista_inventario;

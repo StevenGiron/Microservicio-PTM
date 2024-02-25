@@ -1,0 +1,57 @@
+health-check:
+  time: 3000
+
+info:
+  app:
+    name: PTM prueba tecnica
+    version: 1.0.0
+    description: Spring Reactive Application
+    context: '/spring-reactive'
+
+server:
+  port: 9000
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        exclude: '*'
+
+logging:
+  level:
+    reactor:
+      netty:
+        http:
+          client:
+            HttpClient: DEBUG
+
+jasypt:
+  encryptor:
+    password: ${jasyptpwd:secretkey}
+    algorithm: PBEWithMD5AndDES
+
+database:
+  driver: mysql
+  host: localhost
+  port: 13306
+  name: ptm_db
+  username: steven
+  password: root
+  initialization:
+    schema: db/schema.sql
+    data: db/data.sql
+  pool:
+    name: spring-service-reactivo
+    initial-size: 2
+
+swagger:
+  api:
+    info:
+      title: "${info.app.name}"
+      version: "${info.app.version}"
+      description: "${info.app.description}"
+  contact:
+    name: Steven Giron Arcila
+    url: https://github.com/StevenGiron?tab=repositories
+    email: steven.giron.arcila.99@mail.com

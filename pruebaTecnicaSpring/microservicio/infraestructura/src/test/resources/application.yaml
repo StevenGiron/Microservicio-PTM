@@ -1,0 +1,8 @@
+health-check:
+  time: 50
+
+database:
+  driver: mysql
+  initialization:
+    schema: db/schema.sql
+    data: db/data.sql

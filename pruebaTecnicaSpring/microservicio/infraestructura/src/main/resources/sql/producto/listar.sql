@@ -1,0 +1,1 @@
+SELECT id, nombre, descripcion, precio, stock FROM productos
